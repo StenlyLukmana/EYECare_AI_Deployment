@@ -3,7 +3,7 @@ html, body {
     width: 100dvw;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#262B42, #414070), url(assets/background.png) !important;
+    background: linear-gradient(135deg, #E6EEF5, #B4CDE4), url(assets/background.png);
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,73 +11,54 @@ html, body {
 }
 
 .navbar {
-    height: 100px;
-    background-color: #76B1FF;
-    margin-bottom: 5dvh;
-}
-
-.brand {
-    padding-top: var(--bs-navbar-brand-padding-y);
-    padding-bottom: var(--bs-navbar-brand-padding-y);
-    margin-right: var(--bs-navbar-brand-margin-end);
-    font-size: 30px;
-    color: whitesmoke;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.nav-item {
-    font-size: 20px;
-    margin-left: 25px;
-}
-
-.active {
-    color: whitesmoke;
-}
-
-.main-body {
-    width: 1000px;
-}
-
-.option-container {
-    width: 100%;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    margin: 0;
+    height: 90px;
+    background-color: #364A64;
     display: flex;
-    flex-direction: row;
-    padding-left: 25%;
-    padding-right: 25%;
+    align-items: center;
     justify-content: space-between;
 }
 
-.card {
-    background-color: #76B1FF !important;
-    align-items: center;
+.brand {
+    display: flex;
+    flex-direction: row;
 }
 
-.card-img-container {
-    height: 120px;
-    width: 120px;
-    overflow: hidden;
-    align-items: center;
+.brand p {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
 }
 
-.card-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+.EYE-text {
+    color: #76B1FF;
 }
 
-.card-header {
-    width: 100%;
-}
-
-.card-text {
-    font-size: 30px;
+.Care-text {
     color: white;
-    text-align-last: center;
-    text-align: center;
 }
 
-.card-body {
-    width: 100%;
-    padding: 10px;
+.option-container {
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.option-container a {
+    font-size: 25px;
+    /* color: whitesmoke; */
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.option-selected {
+    color: #88C0D0
+}
+
+.option-choice {
+    color: white;
 }
