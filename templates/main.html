@@ -10,12 +10,11 @@
 
     <nav class="navbar">
         <div class="brand">
-            <p class="EYE-text">EYE</p><p class="Care-text">Care</p>
+            <p class="EYE-text">EYE</p>
+            <p class="Care-text">Care</p>
         </div>
         <div class="option-container">
             <a class="option-selected" href="">Home</a>
-            <a class="option-choice" href="">Process</a>
-            <a class="option-choice" href="">About</a>
         </div>
     </nav>
 
@@ -23,36 +22,31 @@
 
         <div class="card">
             <div class="card-form-container">
-                <form action="/analyse" method="POST" enctype="multipart/form-data">
-
-                    <div class="mb-3">
-                        <label for="" class="form-label">Image</label>
-                        <input name="imageFile" type="file" class="form-control" required>
+                <form class="form" action="/analyse" method="POST" enctype="multipart/form-data">
+                    <div class="main-form-container">
+                        <label for="" class="form-label">Upload Image</label>
+                        <div class="file-upload">
+                            <label for="imageFile" class="custom-button">Upload Image</label>
+                            <span id="file-name" class="file-name">No file chosen</span>
+                            <input id="imageFile" class="input-file" name="imageFile" type="file" required>
+                        </div>                                               
                     </div>
-
-                    <button type="submit" class="button">Analyse</button>
-
+                    <div class="button-container">
+                        <button type="submit" class="button">Analyse</button>
+                    </div>
                 </form>
             </div>
             <div class="card-prediction-container">
-
-
-
+                {% if prediction %}
+                <div class="prediction">
+                    <p class="Diagnosis-text">Diagnosis:</p>
+                    <p class="prediction-text">{{ prediction }} {{ confidence }}%</p>
+                </div>
+                {% endif %}
             </div>
-        </div>
+        </div>        
         
     </div>
-
-    <!-- {% if prediction %}
-    <div class="container col-md-6 mt-4">
-        <div class="card shadow">
-            <div class="card-body text-center">
-                <h3>Diagnosis</h3>
-                <p class="text-success fs-5">{{ prediction }} {{confidence}}%</p>
-            </div>
-        </div>
-    </div>
-    {% endif %} -->
-
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
